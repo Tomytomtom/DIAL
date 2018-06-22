@@ -1,0 +1,60 @@
+Key:
+email || password (role)
+
+coffee@cheetos@chicken.com || jermaJoke985 (Helper)
+tomy@tom.com || incorrect4 (Admin)
+choong@bae.com || dripDrop12 (Admin)
+salty@nugget.com || blockedArteries7 (Carer)
+thomas@nocomments.com || keker666 (Admin)
+levi@vile.evil.com || die4you (Admin)
+someone@lost.com || amnesiac2 (Member)
+sql@injection.com || nodrops8 (Member)
+genji@main.com || eyeNeedHealing0 (Helper)
+everybody@move.com || ultimate5 (Carer)
+-----------------------------------------------------------------------
+
+Code to add to OOPASP/Global.asax.cs (include System.Web.Security AND WebMatrix.WebData):
+REMEMBER TO DELETE THE CODE ONCE THEY'RE ADDED!!!!!!!
+
+            // uncomment below if an exception occurs about no database connection initialised
+            //WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "EmailAddress", autoCreateTables: true);
+
+            WebSecurity.CreateUserAndAccount("coffee@cheetos.chicken.com", "jermaJoke985", new { UserName = "Jerma985", TermsAccepted = true });
+            Roles.AddUserToRole("coffee@cheetos.chicken.com", "Helper");
+
+            WebSecurity.CreateUserAndAccount("tomy@tom.com", "incorrect4", new { UserName = "Tomytomtom", TermsAccepted = true });
+            Roles.AddUserToRole("tomy@tom.com", "Admin");
+
+            WebSecurity.CreateUserAndAccount("choong@bae.com", "dripDrop12", new { UserName = "Brilliantbae123", TermsAccepted = true });
+            Roles.AddUserToRole("choong@bae.com", "Admin");
+
+            WebSecurity.CreateUserAndAccount("salty@nugget.com", "blockedArteries7", new { UserName = "LlikFlesruoy", TermsAccepted = false });
+            Roles.AddUserToRole("salty@nugget.com", "Carer");
+
+            WebSecurity.CreateUserAndAccount("thomas@nocomments.com", "keker666", new { UserName = "Alpha", TermsAccepted = true });
+            Roles.AddUserToRole("thomas@nocomments.com", "Admin");
+
+            WebSecurity.CreateUserAndAccount("levi@vile.evil.com", "die4you", new { UserName = "NerUsame", TermsAccepted = false });
+            Roles.AddUserToRole("levi@vile.evil.com", "Admin");
+
+            WebSecurity.CreateUserAndAccount("someone@lost.com", "amnesiac2", new { UserName = "XxXEdgyKiddoxxXXXxxxxXXxeks", TermsAccepted = false });
+            Roles.AddUserToRole("someone@lost.com", "Member");
+
+            WebSecurity.CreateUserAndAccount("sql@injection.com", "nodrops8", new { UserName = "GET DESTROID", TermsAccepted = false });
+            Roles.AddUserToRole("sql@injection.com", "Member");
+
+            WebSecurity.CreateUserAndAccount("genji@main.com", "eyeNeedHealing0", new { UserName = "NotYou", TermsAccepted = true });
+            Roles.AddUserToRole("genji@main.com", "Helper");
+
+            WebSecurity.CreateUserAndAccount("everybody@move.com", "ultimate5", new { UserName = "Trinergy", TermsAccepted = true });
+            Roles.AddUserToRole("everybody@move.com", "Carer");
+
+
+
+
+
+
+
+
+
+
